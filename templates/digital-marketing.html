@@ -1,0 +1,240 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section
+    style="
+        background-image: url(https://docrdsfx76ssb.cloudfront.net/static/1605732010/pages/wp-content/uploads/2019/03/digitalmarketing.jpg);
+        background-size: cover;
+    "
+    id="testing"
+    class="top-section pb-lg-5 mb-lg-5"
+>
+    <div class="container pt-5 mt-5">
+        <div class="row">
+            <div
+                id="bitly101"
+                class="col-lg-7 col-12 pt-lg-5 mt-lg-5 pl-lg-5 ml-lg-5 order-md-1 order-2"
+            >
+                <strong class="pl-lg-5 ml-lg-2">Digital Marketing</strong>
+                <h1
+                    style="font-size: 48px"
+                    class="mt-lg-1 pl-lg-5 ml-lg-2 py-lg-0 py-3"
+                >
+                Better links, better results
+                </h1>
+                <h2 class="pl-lg-5 mr-lg-3 ml-lg-2">
+                    Convert clicks to customers with trusted call-to-action links.
+                </h2>
+                <div class="mr-lg-3 pl-lg-5 pt-5 ml-lg-2">
+                    <a
+                        href="{{ url_for("pricing") }}"
+                        role="button"
+                        class="btn btn-primary custom-btn"
+                    >
+                        Get Started</a
+                    >
+                </div>
+                <div class="mr-lg-3 pl-5 pl-lg-2 pb-lg-0 ml-lg-2 pt-lg-2">
+                    <a
+                        style="text-decoration: none"
+                        class="pl-5 ml-4 get-quote"
+                        href="{{ url_for("pricing") }}"
+                        >Get a quote</a
+                    >
+                </div>
+            </div>
+
+            <div class="col-lg-4 order-md-2 order-1">
+                <img
+                    class="img-fluid pt-lg-5 img-magic py-lg-0 py-4"
+                    src="{{ url_for("static", filename="images/digital.jpg") }}"
+                    alt=""
+                />
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr width="85%" />
+
+<section class="promotion-section px-lg-5 mx-lg-5">
+    <div class="container px-lg-0 px-4">
+        <div class="row qualities pb-lg-2">
+            <div
+                class="col-lg-7 bitly101desc pt-lg-5 pl-lg-5"
+            >
+                <h5 style="font-weight: 800; font-size: 18px; color: #1d1f21;" class="pl-4 pb-lg-3">Key Features</h5>
+                <div class="feature-div">
+                    <div class="py-2 ml-lg-3 pl-lg-3">
+                        <h5
+                            style="text-align: left"
+                            class="key-feature pb-lg-2 py-lg-0 py-2"
+                        >
+                            <i class="fas fa-paperclip fa-lg pr-lg-3"></i>  Links built for
+                            social
+                        </h5>
+                        <p class="pl-lg-4 ml-lg-3 feature-para">
+                            Share and manage links your followers will want to
+                            click.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature-div">
+                    <div class="py-2 ml-lg-3 pl-lg-3">
+                        <h5
+                            style="text-align: left"
+                            class="key-feature pb-lg-2 py-lg-0 py-2"
+                        >
+                            <i class="fas fa-link fa-lg pr-lg-3"></i>  Brand-building in every
+                            link
+                        </h5>
+                        <p class="pl-lg-4 ml-lg-3 feature-para">
+                            Amplify and further expand your brand with each
+                            share.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature-div">
+                    <div class="py-2 ml-lg-3 pl-lg-3">
+                        <h5
+                            style="text-align: left"
+                            class="key-feature pb-lg-2 py-lg-0 py-2"
+                        >
+                            <i class="fas fa-tachometer-alt fa-lg pr-lg-3"></i>  Clearer
+                            insights, less guesswork
+                        </h5>
+                        <p class="pl-lg-4 ml-lg-3 feature-para">
+                            Identify your best content across social channels.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="col-lg-5 text-center py-lg-0 py-2">
+                <img
+                    class="img-fluid bitly101-img p-lg-4"
+                    src="{{ url_for("static", filename="images/dash-min.gif") }}"
+                    alt="second-image"
+                />
+            </div>
+        </div>
+
+        <hr width="92%" />
+    </div>
+</section>
+
+<section class="brands-section pb-lg-5">
+    <div class="row">
+        <div class="col text-center">
+            <h3>The most recognized brands in the world love Bitly</h3>
+        </div>
+    </div>
+
+    <div class="row pl-lg-0 pl-3 ml-auto ml-lg-0">
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid check" src="{{ url_for("static", filename="images/espn.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/disney.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/amazon.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/nike.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/buzzFeed.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/theNYTimes.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/gartner.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/bose.svg") }}" alt="" />
+        </div>
+
+        <div class="col-lg-2"></div>
+    </div>
+</section>
+
+    <hr width="81%" />
+
+
+<section id="bragging" class="pt-3 pb-5">
+    <div class="container px-lg-5">
+        <div class="row pb-lg-5 py-lg-0 py-2">
+            <div class="col-12 text-center">
+                <h3 class="promo-head">
+                    Best-in class experience, reliability, and security
+                </h3>
+                <h4 class="promo-desc">
+                    Bitly is the world’s leading link management platform for
+                    digital marketers.
+                </h4>
+            </div>
+        </div>
+
+        <div class="row px-lg-5">
+            <div class="col-md-4 px-lg-5 py-lg-0 py-2">
+                <img
+                    width="60px"
+                    class="img-fluid"
+                    src="images/dig1.svg"
+                    alt=""
+                />
+                <h5 class="quality-head pt-lg-3 pb-lg-2">
+                    Seamless integrations
+                </h5>
+                <p class="quality-desc">
+                    Bitly integrates with hundreds of industry-leading marketing
+                    platforms, including the tools you love and use every day.
+                </p>
+            </div>
+
+            <div class="col-md-4 px-lg-5 py-lg-0 py-2">
+                <img
+                    width="60px"
+                    class="img-fluid"
+                    src="images/dig2.svg"
+                    alt=""
+                />
+                <h5 class="quality-head pt-lg-3 pb-lg-2">
+                    Proven API for links at scale
+                </h5>
+                <p class="quality-desc">
+                    Automate the delivery of unique branded links for SMS
+                    marketing efforts or as part of any customized programmatic
+                    workflow.
+                </p>
+            </div>
+
+            <div class="col-md-4 px-lg-5 py-lg-0 py-2">
+                <img
+                    width="60px"
+                    class="img-fluid"
+                    src="images/dig3.svg"
+                    alt=""
+                />
+                <h5 class="quality-head pt-lg-3 pb-lg-2">
+                    Ready-to-go support
+                </h5>
+                <p class="quality-desc">
+                    If you have questions, you’ll have full access to Bitly’s
+                    extensive knowledge base and resource library. If you’re an
+                    Enterprise customer, you’ll also be paired up with a
+                    customer success manager.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,272 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="top-section pb-lg-4">
+    <div class="container pt-5 mt-5">
+        <div class="row">
+            <div
+                id="bitly101"
+                class="col-lg-7 col-12 pt-lg-5 mt-lg-5 pl-lg-5 ml-lg-2"
+            >
+                <strong class="pl-lg-5 ml-lg-2">Bitly 101</strong>
+                <h1
+                    style="font-size: 48px"
+                    class="mt-lg-1 pl-lg-5 ml-lg-2 py-lg-0 py-3"
+                >
+                    World-class link management
+                </h1>
+                <h2 class="pl-lg-5 mr-lg-3 ml-lg-2">
+                    Bitly helps businesses shine by transforming their links
+                    into powerful tools for marketers and customer support
+                    teams.
+                </h2>
+                <div class="mr-lg-3 pl-lg-5 pt-5 ml-lg-2">
+                    <a
+                        href="{{ url_for("pricing") }}"
+                        role="button"
+                        class="btn btn-primary custom-btn"
+                    >
+                        Get Started</a
+                    >
+                </div>
+                <div class="mr-lg-3 pl-5 pl-lg-2 pb-lg-0 ml-lg-2 pt-lg-2">
+                    <a
+                        style="text-decoration: none"
+                        class="pl-5 ml-4 get-quote"
+                        href="{{ url_for("pricing") }}"
+                        >Get a quote</a
+                    >
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <img
+                    class="img-fluid pt-lg-5"
+                    src="{{ url_for("static", filename="images/bitly101.jpg") }}"
+                    alt=""
+                />
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr width="85%" />
+
+<section class="promotion-section px-lg-5 mx-lg-5">
+    <div class="container px-lg-0 px-4">
+        <div class="row qualities pb-lg-2">
+            <div class="col-lg-6 order-lg-1 order-2 bitly101desc pt-lg-5">
+                <h3 style="text-align: left" class="headers pl-lg-5 pb-lg-2 py-lg-0 py-2">
+                    Work smarter with Bitly’s all-in-one platform
+                </h3>
+                <p class="pl-lg-5 py-lg-0 py-2" style="text-align: left">
+                    Creating, sharing and monitoring your links shouldn’t be a
+                    drag. Bitly helps you work faster and more
+                    intelligently—with features like branded links and the
+                    ability to redirect any link—so you can relish the sweet
+                    taste of hitting your performance goals.
+                </p>
+
+                <div class="row pb-lg-3 pl-lg-5 pb-lg-2 py-lg-0 py-2">
+                    <div class="col">
+                        <a  style="text-decoration: none; color: #2a5bd7;"
+                            href="#"
+                            role="button"
+                            class="btn bitly101-btn"
+                            >Learn More</a
+                        >
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 order-lg-2 order-1 text-center py-lg-0 py-2">
+                <img
+                    class="img-fluid bitly101-img p-lg-4"
+                    src="{{ url_for("static", filename="images/bitly101img1.png") }}"
+                    alt="second-image"
+                />
+            </div>
+        </div>
+
+        <div class="row qualities pb-lg-2">
+            <div class="col-lg-6 text-center py-lg-0 py-2">
+                <img
+                    class="img-fluid bitly101-img p-lg-4"
+                    src="{{ url_for("static", filename="images/bitly101img2.jpg") }}"
+                    alt="second-image"
+                />
+            </div>
+            <div class="col-lg-6 bitly101desc pt-lg-5">
+                <h3 style="text-align: left" class="headers pl-lg-5 pb-lg-2 py-lg-0 py-2">
+                    Get more clicks with custom links
+                </h3>
+                <p class="pl-lg-5 py-lg-0 py-2" style="text-align: left">
+                    Make your links powerful marketing assets. Custom links
+                    replace “bit.ly” with your chosen domain name, making your
+                    links consistently recognizable across channels. They’re so
+                    powerful, businesses that use them get up to 34% more
+                    clicks.
+                </p>
+                <div class="row pb-lg-3 pl-lg-5 pb-lg-2 py-lg-0 py-2">
+                    <div class="col">
+                        <a style="text-decoration: none; color: #2a5bd7;"
+                            href="#"
+                            role="button"
+                            class="btn bitly101-btn"
+                            >Learn More</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="mt-4 mt-lg-0" width="92%" />
+
+        <div class="row qualities pb-lg-2">
+            <div class="col-lg-6 order-lg-1 order-2 bitly101desc pt-lg-5">
+                <h3 style="text-align: left" class="headers pl-lg-5 pb-lg-2 py-lg-0 py-2">
+                    Maximize your performance using real-time analytics
+                </h3>
+                <p class="pl-lg-5 py-lg-0 py-2" style="text-align: left">
+                    Understand what content is resonating with your audience
+                    with comprehensive metrics on every link and campaign—like
+                    clicks, geographic data, and top referring channels. Bitly
+                    takes the guesswork out of your link performance so you can
+                    share more of what your audience wants.
+                </p>
+                <div class="row pb-lg-3 pl-lg-5 pb-lg-2 py-lg-0 py-2">
+                    <div class="col">
+                        <a style="text-decoration: none; color: #2a5bd7;"
+                            href="#"
+                            role="button"
+                            class="btn bitly101-btn"
+                            >Learn More</a
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 order-lg-2 order-1 text-center py-lg-0 py-2">
+                <img
+                    class="img-fluid bitly101-img p-lg-4"
+                    src="{{ url_for("static", filename="images/bitly101img3.jpg") }}"
+                    alt="second-image"
+                />
+            </div>
+        </div>
+
+        <hr class="mt-4 mt-lg-0" width="92%" />
+
+        <div class="row qualities pb-lg-2">
+            <div class="col-lg-6 text-center py-lg-0 py-2">
+                <img
+                    class="img-fluid bitly101-img p-lg-4"
+                    src="{{ url_for("static", filename="images/bitly101img4.jpg") }}"
+                    alt="second-image"
+                />
+            </div>
+            <div class="col-lg-6 bitly101desc pt-lg-5">
+                <h3 style="text-align: left" class="headers pl-lg-5 pb-lg-2 py-lg-0 py-2">
+                    Integrate seamlessly with the tools you love
+                </h3>
+                <p class="pl-lg-5 py-lg-0 py-2" style="text-align: left">
+                    Bitly integrates with nearly every social media and digital
+                    marketing tool, saving you time and hassle. Need to create
+                    links at scale? Bitly’s got you covered. Whether you need
+                    100 links or 100,000, the open and flexible Bitly API makes
+                    it simple and seamless.
+                </p>
+                <div class="row pb-lg-3 pl-lg-5 pb-lg-2 py-lg-0 py-2">
+                    <div class="col">
+                        <a style="text-decoration: none; color: #2a5bd7;"
+                            href="#"
+                            role="button"
+                            class="btn bitly101-btn"
+                            >Learn More</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="mt-4 mt-lg-0" width="92%" />
+
+        <div class="row qualities pb-lg-2">
+            <div class="col-lg-6 order-lg-1 order-2 bitly101desc pt-lg-5">
+                <h3 style="text-align: left" class="headers pl-lg-5 pb-lg-2 py-lg-0 py-2">
+                    Rest assured knowing your links are secure
+                </h3>
+                <p class="pl-lg-5 py-lg-0 py-2" style="text-align: left">
+                    Bitly is dedicated to ensuring your links are safe and
+                    reliable. Every link you create using Bitly is encrypted
+                    with HTTPS to maximize protection against eavesdropping or
+                    tampering by third parties, keeping your content safe from
+                    the bad guys.
+                </p>
+                <div class="row pb-lg-3 pl-lg-5 pb-lg-2 py-lg-0 py-2">
+                    <div class="col">
+                        <a style="text-decoration: none; color: #2a5bd7;"
+                            href="#"
+                            role="button"
+                            class="btn bitly101-btn"
+                            >Learn More</a
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 order-lg-2 order-1 text-center py-lg-0">
+                <img
+                    width="450px"
+                    class="img-fluid p-lg-4 pt-lg-0 pt-5"
+                    src="{{ url_for("static", filename="images/bitly101img5.jpg") }}"
+                    alt="second-image"
+                />
+            </div>
+        </div>
+        <hr width="92%" />
+    </div>
+</section>
+
+<section class="brands-section pb-lg-5">
+    <div class="row">
+        <div class="col text-center">
+            <h3>The most recognized brands in the world love Bitly</h3>
+        </div>
+    </div>
+
+    <div class="row pl-lg-0 pl-3 ml-auto ml-lg-0">
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid check" src="{{ url_for("static", filename="images/espn.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/disney.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/amazon.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/nike.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/buzzFeed.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/theNYTimes.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/gartner.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/bose.svg") }}" alt="" />
+        </div>
+
+        <div class="col-lg-2"></div>
+    </div>
+</section>
+
+{% endblock %}

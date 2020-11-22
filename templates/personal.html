@@ -1,0 +1,95 @@
+{% extends "base-no-nav.html" %}
+
+{% block content %}
+
+    <script type="text/javascript">
+        function dynInput(cbox) {
+            if (cbox.checked) {
+                var input = document.createElement("input");
+                input.type = "text";
+                input.name = "other_input"
+                var div = document.createElement("div");
+                div.id = cbox.class;
+                div.appendChild(input);
+                document.getElementById("insertinputs").appendChild(div);
+            } else {
+                document.getElementById(cbox.class).remove();
+            }
+        }
+    </script>
+
+
+    <div class="container pt-lg-5 pt-1">
+        <div class="row justify-content-lg-center pt-4">
+            <div class="col-12 col-lg-4 col-sm-auto px-5">
+                <h2 class="h2">Your Links Are Everything</h2>
+                <p class="para px-lg-0 px-2">Links carry your brand and connect your audience in ways that no other medium can. They're kind of a big deal.</p>
+                <p class="para px-lg-0 px-2">You’re about to start creating powerful links. Easier-to-manage links. Branded links. Bitly links.
+                </p>
+            </div>
+
+            <div class="col-sm-auto col-lg-2 col-12 pt-lg-2 pt-5 px-5 px-lg-3">
+                <div class="pr-lg-2">
+                    <form method="POST">
+                        <div class="form-group">
+                            <label for="fname">First name</label>
+                            <input type="text" name="first_name" class="form-control input-field" id="fname" aria-describedby="emailHelp">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lname">Last name</label>
+                            <input type="text" name="last_name" class="form-control input-field" id="lname" aria-describedby="emailHelp">
+                        </div>
+
+                        <label for="inputState">What are you looking to do? *</label>
+
+                        <div class="form-check py-1">
+                            <input type="checkbox" class="form-check-input" value="Social media marketing" name="options" id="social">
+                            <label class="form-check-label" for="social">
+                                Social media marketing</label>
+                        </div>
+                        <div class="form-check py-1">
+                            <input type="checkbox" class="form-check-input" value="Digital campaigns" name="options" id="digital">
+                            <label class="form-check-label" for="digital">
+                                Digital campaigns</label>
+                        </div>
+                        <div class="form-check py-1">
+                            <input type="checkbox" class="form-check-input" value="SMS notifications" name="options" id="sms">
+                            <label class="form-check-label" for="sms">
+                                SMS notifications</label>
+                        </div>
+                        <div class="form-check py-1">
+                            <input type="checkbox" class="form-check-input" value="Branding" name="options" id="brand">
+                            <label class="form-check-label" for="brand">
+                                Branding</label>
+                        </div>
+                        <div class="form-check py-1">
+                            <input type="checkbox" class="form-check-input" value="Offline campaigns" name="options" id="campaigns">
+                            <label class="form-check-label" for="campaigns">
+                                Offline campaigns</label>
+                        </div>
+                        <div class="form-check py-1">
+                            <input type="checkbox" class="form-check-input" value="Influencer marketing" name="options" id="influence">
+                            <label class="form-check-label" for="influence">
+                                Influencer marketing</label>
+                        </div>
+                        <div class="form-check py-1">
+                            <input type="checkbox" class="form-check-input" value="Internal communications" name="options" id="comms">
+                            <label class="form-check-label" for="comms">
+                                Internal communications</label>
+                        </div>
+                        <div class="py-1 pb-3">
+                            <input class="check" id="other" type="checkbox" value="other" name="options" onclick="dynInput(this);" />
+                            <label class="form-check-label" for="other">
+                                Other</label>
+                            <p id="insertinputs"></p>
+                        </div>
+                        <button type="submit" style="color: #fff; text-decoration: none;" class="btn btn-save">Save</button>
+                        <p class="skip-step pt-4"><a href="{{ url_for('dashboard', unique_id=unique_id) }}" style="text-decoration: none;">Skip this step</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

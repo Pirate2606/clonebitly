@@ -1,0 +1,246 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section
+    style="
+        background-image: url(https://docrdsfx76ssb.cloudfront.net/static/1605732010/pages/wp-content/uploads/2019/03/mobile.jpg);
+        background-size: cover;
+    "
+    id="testing"
+    class="top-section pb-lg-5 mb-lg-5"
+>
+    <div class="container pt-5 mt-5">
+        <div class="row">
+            <div
+                id="bitly101"
+                class="col-lg-7 col-12 pt-lg-5 mt-lg-5 pl-lg-5 ml-lg-5 order-md-1 order-2"
+            >
+                <strong class="pl-lg-5 ml-lg-2">Mobile Links</strong>
+                <h1
+                    style="font-size: 48px"
+                    class="mt-lg-1 pl-lg-5 ml-lg-2 py-lg-0 py-3"
+                >
+                    Create meaningful mobile experiences
+                </h1>
+                <h2 class="pl-lg-5 mr-lg-3 ml-lg-2">
+                    Directly route users to the right destination from your
+                    mobile communications.
+                </h2>
+                <div class="mr-lg-3 pl-lg-5 pt-5 ml-lg-2">
+                    <a
+                        href="{{ url_for("pricing") }}"
+                        role="button"
+                        class="btn btn-primary custom-btn"
+                    >
+                        Get Started</a
+                    >
+                </div>
+                <div class="mr-lg-3 pl-5 pl-lg-2 pb-lg-0 ml-lg-2 pt-lg-2">
+                    <a
+                        style="text-decoration: none"
+                        class="pl-5 ml-4 get-quote"
+                        href="{{ url_for("pricing") }}"
+                        >Get a quote</a
+                    >
+                </div>
+            </div>
+
+            <div class="col-lg-4 order-md-2 order-1">
+                <img
+                    class="img-fluid pt-lg-5 img-magic py-lg-0 py-5 mt-lg-5"
+                    src="{{ url_for("static", filename="images/mobile.jpg") }}"
+                    alt=""
+                />
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr width="85%" />
+
+<section class="promotion-section px-lg-5 mx-lg-5">
+    <div class="container px-lg-0 px-4">
+        <div class="row qualities pb-lg-2">
+            <div class="col-lg-6 text-center py-lg-0 py-2">
+                <img
+                    class="img-fluid bitly101-img p-lg-5"
+                    src="{{ url_for("static", filename="images/mobile1.gif") }}"
+                    alt="second-image"
+                />
+            </div>
+            <div class="col-lg-6 bitly101desc pt-lg-5">
+                <h3
+                    style="text-align: left"
+                    class="headers pl-lg-5 pb-lg-2 py-lg-0 py-2"
+                >
+                    SMS Messaging
+                </h3>
+                <p class="pl-lg-5 py-lg-0 py-2" style="text-align: left">
+                    Tap into the powerful Bitly API to create thousands of
+                    unique SMS communications for customer support updates,
+                    order statuses, service delays or changes, appointment
+                    reminders, fundraising, and location-based promotions using
+                    short branded links. And, since they’re short links, save on
+                    SMS per-character fees.
+                </p>
+                <div class="row pb-lg-3 pl-lg-5 pb-lg-2 py-lg-0 py-2"></div>
+            </div>
+        </div>
+
+        <hr class="mt-4 mt-lg-0" width="92%" />
+
+        <div class="row qualities pb-lg-2">
+            <div class="col-lg-6 order-lg-1 order-2 bitly101desc pt-lg-5">
+                <h3
+                    style="text-align: left"
+                    class="headers pl-lg-5 pb-lg-2 py-lg-0 py-2"
+                >
+                    Deep Links
+                </h3>
+                <p class="pl-lg-5 py-lg-0 py-2" style="text-align: left">
+                    Use Bitly’s mobile deep links to directly route users to the
+                    right place within your app or send them to the app store to
+                    download it. Deep links create a seamless transition to
+                    mobile, drive app engagement, and encourage app installs.
+                </p>
+                <div class="row pb-lg-3 pl-lg-5 pb-lg-2 py-lg-0 py-2"></div>
+            </div>
+
+            <div class="col-lg-6 order-lg-2 order-1 text-center py-lg-0 py-2">
+                <img
+                    class="img-fluid bitly101-img p-lg-5"
+                    src="{{ url_for("static", filename="images/mobile2.gif") }}"
+                    alt="second-image"
+                />
+            </div>
+        </div>
+
+        <hr class="mt-4 mt-lg-0" width="92%" />
+
+        <div class="row qualities pb-lg-2">
+            <div class="col-lg-6 text-center py-lg-0 py-2">
+                <img
+                    class="img-fluid bitly101-img p-lg-5"
+                    src="{{ url_for("static", filename="images/mobile3.png") }}"
+                    alt="second-image"
+                />
+            </div>
+            <div class="col-lg-6 bitly101desc pt-lg-5">
+                <h3
+                    style="text-align: left"
+                    class="headers pl-lg-5 pb-lg-2 py-lg-0 py-2"
+                >
+                    QR Codes
+                </h3>
+                <p class="pl-lg-5 py-lg-0 py-2" style="text-align: left">
+                    Instantly generate a QR code for any of your Bitly links.
+                    Our QR Codes have all of the powerful tracking and features
+                    of our links and can be placed virtually anywhere—print
+                    media, billboards, storefronts, stickers, t-shirts, you name
+                    it—to connect your users back to your online experience.
+                </p>
+                <div class="row pb-lg-3 pl-lg-5 pb-lg-2 py-lg-0 py-2"></div>
+            </div>
+        </div>
+
+        <hr class="mt-4 mt-lg-0" width="92%" />
+
+        <div class="row qualities pb-lg-2">
+            <div class="col-lg-6 order-lg-1 order-2 bitly101desc pt-lg-5">
+                <h3
+                    style="text-align: left"
+                    class="headers pl-lg-5 pb-lg-2 py-lg-0 py-2"
+                >
+                    Campaign Management & Analytics
+                </h3>
+                <p class="pl-lg-5 py-lg-0 py-2" style="text-align: left">
+                    A real-time, interactive dashboard gives you a full view of
+                    metrics like app opens and store visits across every device
+                    and channel—whether that’s Twitter, Facebook, email, or SMS.
+                    With Bitly, you can clearly see what’s working, as well as
+                    where and how your customers are engaging.
+                </p>
+                <div class="row pb-lg-3 pl-lg-5 pb-lg-2 py-lg-0 py-2"></div>
+            </div>
+
+            <div class="col-lg-6 order-lg-2 order-1 text-center py-lg-0">
+                <img
+                    width="450px"
+                    class="img-fluid p-lg-3 pt-5"
+                    src="{{ url_for("static", filename="images/mobile4.gif") }}"
+                    alt="second-image"
+                />
+            </div>
+        </div>
+        <hr width="92%" />
+
+        <div class="row qualities pb-lg-2">
+            <div class="col-lg-6 order-lg-1 order-2 text-center py-lg-0 py-2">
+                <img
+                    class="img-fluid bitly101-img p-lg-5"
+                    src="{{ url_for("static", filename="images/mobile5.jpg") }}"
+                    alt="second-image"
+                />
+            </div>
+            <div class="col-lg-6 order-lg-2 order-1 bitly101desc pt-lg-5">
+                <h3
+                    style="text-align: left"
+                    class="headers pl-lg-5 pb-lg-2 py-lg-0 py-2"
+                >
+                    Integrations
+                </h3>
+                <p class="pl-lg-5 py-lg-0 py-2" style="text-align: left">
+                    Bitly integrates into your workflow and existing tech stack
+                    so you don’t need to change the way you do things. Create
+                    mobile deep links right from the tools you’re already using,
+                    like Hootsuite, Sprinklr, Spredfast, Salesforce Marketing
+                    Cloud, and hundreds more.
+                </p>
+
+                <div class="row pb-lg-3 pl-lg-5 pb-lg-2 py-lg-0 py-2"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="brands-section pb-lg-5 pt-lg-3">
+    <div class="row">
+        <div class="col text-center">
+            <h3>The most recognized brands in the world love Bitly</h3>
+        </div>
+    </div>
+
+    <div class="row pl-lg-0 pl-3 ml-auto ml-lg-0">
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid check" src="{{ url_for("static", filename="images/espn.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/disney.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/amazon.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/nike.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/buzzFeed.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/theNYTimes.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/gartner.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/bose.svg") }}" alt="" />
+        </div>
+
+        <div class="col-lg-2"></div>
+    </div>
+</section>
+
+{% endblock %}

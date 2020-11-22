@@ -1,0 +1,294 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<section class="top-section pb-lg-4 pb-1">
+    <div class="container pt-5 mt-5">
+        <div class="row">
+            <div class="col-lg-7 col-12 pt-lg-5 mt-lg-5 pl-lg-5 ml-lg-5">
+                <h1 class="mt-lg-5 pl-lg-5 ml-lg-5 py-lg-0 py-3">
+                    Short links, big results
+                </h1>
+                <h2 class="pl-lg-5 mr-lg-3 ml-lg-5">
+                    A URL shortener built with powerful tools to help you grow
+                    and protect your brand.
+                </h2>
+                <div class="mr-lg-3 pl-lg-5 pt-5 ml-lg-5">
+                    <a
+                        href="{{ url_for("signup") }}"
+                        role="button"
+                        class="btn btn-primary btn-get-started custom-btn"
+                    >
+                        Get Started for Free</a
+                    >
+                </div>
+                <div class="mr-lg-3 pl-5 pb-lg-0 pb-5 ml-lg-5 pt-lg-2">
+                    <a
+                        style="text-decoration: none"
+                        class="pl-5 ml-4 get-quote"
+                        href="{{ url_for("pricing") }}"
+                        >Get a quote</a
+                    >
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <img
+                    class="img-fluid pt-lg-5"
+                    src="{{ url_for("static", filename="images/topSectionCrop.jpg") }}"
+                    alt=""
+                />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container pt-5 pb-3 pb-lg-0 py-lg-0 shorten-section">
+        <div class="row ml-lg-5 pl-lg-4">
+            <div
+                class="input-group col-lg-8 col-12 mb-lg-3 pl-lg-5 pb-lg-0 pb-3 pt-lg-4"
+            >
+                <input
+                    type="url"
+                    class="form-control ml-lg-5 enter-url"
+                    placeholder="Shorten your link"
+                    name="original_url"
+                    id="urlInput"
+                />
+            </div>
+
+            <div class="col-12 col-lg-4 pb-lg-0 pb-3 pt-lg-4 pl-lg-3 ml-lg-0">
+                <button class="btn btn-primary btn-shorten updateButton">
+                    Shorten
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <p>
+                    By clicking SHORTEN, you are agreeing to Bitly’s
+                    <a class="secTwoLinks" href="{{ url_for('terms') }}">Terms of Service</a> and
+                    <a class="secTwoLinks" href="{{ url_for('privacy') }}">Privacy Policy.</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="container short-links py-lg-0 py-3 limit-cross">
+            <div class="row pt-lg-4 py-lg-0 py-2 text-center" style="align-items: center; margin-bottom: 5px; background-color: #fa9b93; border-radius: 8px;">
+                <div class="col-12 my-auto">
+                    <p style="color: #731b14; font-size: 18px;">Whoa - you have exceeded your quota. Create a free account to keep shortening.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container short-links py-lg-0 py-3">
+            <div class="row pt-lg-4 py-lg-0 py-2 url1">
+                <div class="col-lg-6 col-12 pt-lg-2">
+                    <p class="home-long-link new-long1">
+                    </p>
+                </div>
+                <div class="col-lg-4 col-12 pt-lg-2 pr-5 pr-lg-0 py-lg-0 py-2 short-link-div">
+                    <a style="text-decoration: none;" href="" class="new1 home-short-link" target="_blank"
+                        ></a
+                    >
+                </div>
+
+                <div class="col-lg-2 col-12 pl-lg-5 pt-lg-0 pt-1">
+                    <a style="text-decoration: none; color: #2a5bd7;"
+                            role="button"
+                            onclick="myFunction('.new1', '.copy_button1')"
+                            class="btn copy-btn-home copy_button1"
+                            >Copy</a
+                        >
+                </div>
+            </div>
+
+            <hr class="url-hr1" style="height:1.5px;border:none;color:#E8E9EB;background-color:#E8E9EB;" />
+
+            <div class="row url2">
+                <div class="col-lg-6 col-12 pt-lg-2">
+                    <p class="home-long-link new-long2">
+                    </p>
+                </div>
+
+                <div class="col-lg-4 col-12 pt-lg-2 pr-5 pr-lg-0 py-lg-0 py-2 short-link-div">
+                    <a style="text-decoration: none;" href="" class="new2 home-short-link" target="_blank"
+                        ></a
+                    >
+                </div>
+
+                <div class="col-lg-2 col-12 pl-lg-5 py-lg-0 py-2">
+                    <a style="text-decoration: none; color: #2a5bd7;"
+                            onclick="myFunction('.new2', '.copy_button2')"
+                            role="button"
+                            class="btn copy-btn-home copy_button2"
+                            >Copy</a
+                        >
+                </div>
+            </div>
+
+            <hr class="url-hr2" style="height:1.5px;border:none;color:#E8E9EB;background-color:#E8E9EB;" />
+
+            <div class="row pb-lg-3 url3">
+                <div class="col-lg-6 col-12 pt-lg-2">
+                    <p class="home-long-link new-long3">
+                    </p>
+                </div>
+
+                <div class="col-lg-4 col-12 pt-lg-2 pr-5 pr-lg-0 py-lg-0 py-2 short-link-div">
+                    <a style="text-decoration: none;" href="" class="new3 home-short-link" target="_blank"
+                        ></a
+                    >
+                </div>
+
+                <div class="col-lg-2 col-12 pl-lg-5 py-lg-0 py-2">
+                    <a style="text-decoration: none; color: #2a5bd7;"
+                            onclick="myFunction('.new3', '.copy_button3')"
+                            role="button"
+                            class="btn copy-btn-home copy_button3"
+                            >Copy</a
+                        >
+                </div>
+            </div>
+        </div>
+
+        <div style="height: 1px;">
+            <!-- EMPTY DIV TO PROVIDE SPACING -->
+        </div>
+    </div>
+
+
+    <div class="row scroll-for-more">
+        <div class="col text-center">
+            Scroll to learn more
+            <br />
+            <img
+                loading="lazy"
+                class="aligncenter size-full"
+                src="https://docrdsfx76ssb.cloudfront.net/static/1603310687/pages/wp-content/uploads/2019/03/chevron.png"
+                alt=""
+                width="31"
+                height="20"
+            />
+        </div>
+    </div>
+</section>
+
+<section class="promotion-section px-lg-5 mx-lg-5">
+    <div class="container">
+        <div class="row pb-lg-5">
+            <div class="col-12 text-center promotion">
+                <h2>The link shortener that has your brand’s back</h2>
+                <h4>
+                    Your brand wasn’t built to be hidden. Help it stand out with
+                    branded links that drive 34% more clicks.
+                </h4>
+            </div>
+        </div>
+
+        <div class="row qualities pb-lg-5">
+            <div class="col-lg-4 text-center">
+                <img
+                    class="img-fluid quality-img p-lg-4"
+                    src="{{ url_for("static", filename="images/gridImage1.png") }}"
+                    alt="first-image"
+                />
+                <h2 class="pl-lg-5" style="text-align: left">Inspire Trust</h2>
+                <p class="pl-lg-5 pb-lg-5" style="text-align: left">
+                    With more clicks comes increased brand recognition and
+                    consumer trust in your communications—which in turn inspires
+                    even more engagement with your links. (It’s a wonderful
+                    cycle.)
+                </p>
+            </div>
+
+            <div class="col-lg-4 text-center">
+                <img
+                    class="img-fluid quality-img p-lg-4"
+                    src="{{ url_for("static", filename="images/gridImage2.png") }}"
+                    alt="second-image"
+                />
+                <h2 class="pl-lg-5" style="text-align: left">Boost results</h2>
+                <p class="pl-lg-5 pb-lg-5" style="text-align: left">
+                    On top of better deliverability and click-through, rich
+                    link-level data gives you crucial insight into your link
+                    engagement so your team can make smarter decisions around
+                    its content and communications.
+                </p>
+            </div>
+
+            <div class="col-lg-4 text-center">
+                <img
+                    class="img-fluid quality-img p-lg-4"
+                    src="{{ url_for("static", filename="images/gridImage3.png") }}"
+                    alt="third-image"
+                />
+                <h2 class="pl-lg-5" style="text-align: left">Gain control</h2>
+                <p class="pl-lg-5 pb-lg-5" style="text-align: left">
+                    Take credit for your content and learn more about how it’s
+                    consumed by enabling auto-branding—a feature that ensures
+                    your brand remains in any link someone shortens pointing to
+                    your website.
+                </p>
+            </div>
+        </div>
+
+        <div class="row pb-lg-3">
+            <div class="col text-center">
+                <a href="{{ url_for("pricing") }}" role="button" class="btn btn-primary get-started">Get Started</a>
+            </div>
+        </div>
+
+        <div class="row pb-lg-4">
+            <div class="col text-center">
+                <a style="text-decoration: none;" class="get-quote" href="#">Learn More</a>
+                <hr class="mt-lg-5" width="92%" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="brands-section pb-lg-5">
+    <div class="row">
+        <div class="col text-center">
+            <h3>The most recognized brands in the world love Bitly</h3>
+        </div>
+    </div>
+
+    <div class="row pl-lg-0 pl-3 ml-auto ml-lg-0">
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid check" src="{{ url_for("static", filename="images/espn.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/disney.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/amazon.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/nike.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/buzzFeed.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/theNYTimes.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/gartner.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/bose.svg") }}" alt="" />
+        </div>
+
+        <div class="col-lg-2"></div>
+    </div>
+</section>
+
+
+{% endblock %}

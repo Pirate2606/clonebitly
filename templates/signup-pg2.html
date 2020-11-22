@@ -1,0 +1,43 @@
+{% extends "base-no-nav.html" %}
+
+{% block content %}
+
+    <div class="container pt-lg-5 pt-1">
+        <div class="row justify-content-lg-center pt-4">
+            <div class="col-12 col-lg-4 col-sm-auto px-5">
+                <h2 class="h2">Your Links Are Everything</h2>
+                <p class="para px-lg-0 px-2">Links carry your brand and connect your audience in ways that
+                    no other medium can. They're kind of a
+                    big deal.</p>
+                <p class="para px-lg-0 px-2">You’re about to start creating powerful links. Easier-to-manage
+                    links. Branded links. Bitly links.
+                </p>
+            </div>
+
+            <div class="col-sm-auto col-lg-3 col-12 pt-lg-2 pt-5">
+                <h4 class="h4 pl-lg-0 pl-4 ml-lg-0 ml-3">How will you use your links?</h4>
+                <div class="pr-lg-4 pt-lg-3 pt-1 pl-lg-0 pl-5 pt-lg-0 pt-3">
+                    <div class="pb-lg-3 pb-0 py-lg-0 py-2">
+                            <a class="btn btn-sm btn-primary btn-block btn-usage"
+                               style="color: white; text-decoration: none;"
+                               href="{{ url_for("for_work", unique_id=unique_id) }}"> For work
+                            </a>
+                    </div>
+                    <div class="pb-lg-3 pb-0 py-lg-0 py-2">
+                            <a class="btn btn-sm btn-primary btn-block btn-usage"
+                               style="color: white; text-decoration: none;"
+                               href="{{ url_for("personal", unique_id=unique_id) }}"> For personal use
+                            </a>
+                    </div>
+                    <div class=" py-lg-0 py-2">
+                            <a class="btn btn-sm btn-primary btn-block btn-usage"
+                               style="color: white; text-decoration: none;"
+                               href="{{ url_for("both", unique_id=unique_id) }}"> Both
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,152 @@
+{% extends "base-no-nav.html" %}
+
+{% block content %}
+
+    <script type="text/javascript">
+        function dynInput(cbox) {
+            if (cbox.checked) {
+                var input = document.createElement("input");
+                input.type = "text";
+                input.name = "other_input"
+                var div = document.createElement("div");
+                div.id = cbox.class;
+                div.appendChild(input);
+                document.getElementById("insertinputs").appendChild(div);
+            } else {
+                document.getElementById(cbox.class).remove();
+            }
+        }
+    </script>
+
+
+    <div class="container pt-lg-5 pt-1">
+        <div class="row justify-content-lg-center pt-4">
+            <div class="col-12 col-lg-4 col-sm-auto px-5">
+                <h2 class="h2">Listen to your audience
+                </h2>
+                <p class="para px-lg-0 px-2">Maybe you're a solopreneur, maybe you're one of many Bitly users at your company. Just as you want to understand your audience, we want to understand our customers.</p>
+                <p class="para px-lg-0 px-2">To get you started on the right foot, plese tell us more about your organization.
+                </p>
+            </div>
+
+            <div class="col-sm-auto col-lg-4 col-12 pt-lg-2 pt-5 px-5 px-lg-3">
+                <div class="pr-lg-5 mr-lg-4">
+                    <form method="POST">
+                        <div class="form-group">
+                            <label class="requirement" for="fname">First name</label>
+                            <input type="text" name="first_name" class="form-control input-field" id="fname" aria-describedby="emailHelp">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="requirement" for="lname">Last name</label>
+                            <input type="text" name="last_name" class="form-control input-field" id="lname" aria-describedby="emailHelp">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="requirement" for="org">Organization *</label>
+                            <input type="text" name="organization" class="form-control input-field" id="org" aria-describedby="emailHelp" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="requirement" for="inputState">Title *</label>
+                            <select id="inputState" name="title" class="form-control input-field custom-select mr-sm-2" required>
+                                <option class="default-text" value="" disabled selected hidden>Select title</option>
+                                <option>Owner</option>
+                                <option>Individual Contributor</option>
+                                <option>Manager</option>
+                                <option>Director</option>
+                                <option>VP</option>
+                                <option>Executive</option>
+                                <option>Not Applicable</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="requirement" for="inputState">Your department *</label>
+                            <select id="inputState" name="department" class="form-control input-field custom-select mr-sm-2" required>
+                                <option class="default-text" value="" disabled selected hidden>Select department
+                                </option>
+                                <option>Digital Marketing</option>
+                                <option>Product / Tech</option>
+                                <option>Social Media</option>
+                                <option>PR / Comms</option>
+                                <option>Customer Service</option>
+                                <option>Human Resources</option>
+                                <option>Education</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="requirement" for="inputState">Number of people in organization *</label>
+                            <select id="inputState" name="organization_size" class="form-control input-field custom-select mr-sm-2" required>
+                                <option class="default-text" disabled selected hidden>
+                                    <p class="default-text">Select size of organization</p>
+                                </option>
+                                <option>Less than 50</option>
+                                <option>50-200</option>
+                                <option>200-500</option>
+                                <option>50-1000</option>
+                                <option>More than 1000</option>
+                                <option>Not Applicable</option>
+                            </select>
+                        </div>
+
+                        <label class="requirement" for="inputState">What are you looking to do? *</label>
+
+                        <div class="form-check py-1">
+                            <input type="checkbox" class="form-check-input" name="options" value="Social media marketing" id="social">
+                            <label class="form-check-label work-label" for="social">
+                                Social media marketing</label>
+                        </div>
+                        <div class="form-check py-1">
+                            <input type="checkbox" class="form-check-input" name="options" value="Digital campaigns" id="digital">
+                            <label class="form-check-label work-label" for="digital">
+
+                                Digital campaigns</label>
+                        </div>
+                        <div class="form-check py-1">
+                            <input type="checkbox" class="form-check-input" name="options" value="SMS notifications" id="sms">
+                            <label class="form-check-label work-label" for="sms">
+
+                                SMS notifications</label>
+                        </div>
+                        <div class="form-check py-1">
+                            <input type="checkbox" class="form-check-input" name="options" value="Branding" id="brand">
+                            <label class="form-check-label work-label" for="brand">
+
+                                Branding</label>
+                        </div>
+                        <div class="form-check py-1">
+                            <input type="checkbox" class="form-check-input" name="options" value="Offline campaigns" id="campaigns">
+                            <label class="form-check-label work-label" for="campaigns">
+
+                                Offline campaigns</label>
+                        </div>
+                        <div class="form-check py-1">
+                            <input type="checkbox" class="form-check-input" name="options" value="Influencer" id="influence">
+                            <label class="form-check-label work-label" for="influence">
+
+                                Influencer marketing</label>
+                        </div>
+                        <div class="form-check py-1">
+                            <input type="checkbox" class="form-check-input" name="options" value="Internal communications" id="comms">
+                            <label class="form-check-label work-label" for="comms">
+
+                                Internal communications</label>
+                        </div>
+                        <div class="py-1 pb-3">
+                            <input class="check" id="other" type="checkbox" name="options" value="other" onclick="dynInput(this);" />
+                            <label class="form-check-label work-label" for="other">
+                                Other</label>
+                            <p id="insertinputs"></p>
+                        </div>
+                        <button type="submit" style="color: #fff; text-decoration: none;" class="btn btn-save">Save</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

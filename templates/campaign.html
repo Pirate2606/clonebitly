@@ -1,0 +1,191 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section
+    style="
+        background-image: url(https://docrdsfx76ssb.cloudfront.net/static/1605732010/pages/wp-content/uploads/2019/03/campaignandanalytics-01.jpg);
+        background-size: cover;
+    "
+    id="testing"
+    class="top-section pb-lg-5 mb-lg-5 pt-lg-5"
+>
+    <div class="container pt-5 mt-5">
+        <div class="row">
+            <div
+                id="bitly101"
+                class="col-lg-7 col-12 pt-lg-5 mt-lg-5 pl-lg-5 ml-lg-5 order-md-1 order-2"
+            >
+                <strong class="pl-lg-5 ml-lg-2"
+                    >Campaign Management & Analytics</strong
+                >
+                <h1
+                    style="font-size: 48px"
+                    class="mt-lg-1 pl-lg-5 ml-lg-2 py-lg-0 py-3"
+                >
+                    Short links solve big problems
+                </h1>
+                <h2 class="pl-lg-5 mr-lg-3 ml-lg-2">
+                    Track and optimize every digital initiative using Bitly’s
+                    best-in-class analytics tools.
+                </h2>
+                <div class="mr-lg-3 pl-lg-5 pt-5 ml-lg-2">
+                    <a
+                        href="{{ url_for("pricing") }}"
+                        role="button"
+                        class="btn btn-primary custom-btn"
+                    >
+                        Get Started</a
+                    >
+                </div>
+                <div class="mr-lg-3 pl-5 pl-lg-2 pb-lg-0 ml-lg-2 pt-lg-2">
+                    <a
+                        style="text-decoration: none"
+                        class="pl-5 ml-4 get-quote"
+                        href="{{ url_for("pricing") }}"
+                        >Get a quote</a
+                    >
+                </div>
+            </div>
+
+            <div class="col-lg-4 order-md-2 order-1">
+                <img
+                    class="img-fluid pt-lg-5 img-magic py-lg-0 py-5 mt-lg-5"
+                    src="{{ url_for("static", filename="images/campaign.jpg") }}"
+                    alt=""
+                />
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr width="85%" />
+
+<section class="promotion-section px-lg-5 mx-lg-5">
+    <div class="container px-lg-0 px-4">
+        <div class="row qualities pb-lg-2">
+            <div class="col-lg-6 text-center py-lg-0 py-2">
+                <img
+                    class="img-fluid bitly101-img p-lg-5"
+                    src="{{ url_for("static", filename="images/camp1.gif") }}"
+                    alt="second-image"
+                />
+            </div>
+            <div class="col-lg-6 bitly101desc pt-lg-5">
+                <h3
+                    style="text-align: left"
+                    class="headers pl-lg-5 pb-lg-2 py-lg-0 py-2"
+                >
+                    Be done with spreadsheets
+                </h3>
+                <p class="pl-lg-5 py-lg-0 py-2" style="text-align: left">
+                    Stop hopping from one spreadsheet to the next to track the
+                    performance of your campaigns. With Bitly, you can easily
+                    track your customers’ journeys on every link and channel
+                    from a single, sleek dashboard.
+                </p>
+                <div class="row pb-lg-3 pl-lg-5 pb-lg-2 py-lg-0 py-2"></div>
+            </div>
+        </div>
+
+        <hr class="mt-4 mt-lg-0" width="92%" />
+
+        <div class="row qualities pb-lg-2">
+            <div class="col-lg-6 order-lg-1 order-2 bitly101desc pt-lg-5">
+                <h3
+                    style="text-align: left"
+                    class="headers pl-lg-5 pb-lg-2 py-lg-0 py-2"
+                >
+                    Capture 20+ data points
+                </h3>
+                <p class="pl-lg-5 py-lg-0 py-2" style="text-align: left">
+                    Empower yourself with more than 20 real-time data points –
+                    all the way down to the local city level – on every click,
+                    tap, and swipe so you’re armed with the information you need
+                    to share more of the content your audience is most excited
+                    about.
+                </p>
+                <div class="row pb-lg-3 pl-lg-5 pb-lg-2 py-lg-0 py-2"></div>
+            </div>
+
+            <div class="col-lg-6 order-lg-2 order-1 text-center py-lg-0 py-2">
+                <img
+                    class="img-fluid bitly101-img p-lg-5"
+                    src="{{ url_for("static", filename="images/camp2.png") }}"
+                    alt="second-image"
+                />
+            </div>
+        </div>
+
+        <hr class="mt-4 mt-lg-0" width="92%" />
+
+        <div class="row qualities pb-lg-2">
+            <div class="col-lg-6 text-center py-lg-0 py-2">
+                <img
+                    class="img-fluid bitly101-img p-lg-5"
+                    src="{{ url_for("static", filename="images/camp3.png") }}"
+                    alt="second-image"
+                />
+            </div>
+            <div class="col-lg-6 bitly101desc pt-lg-5">
+                <h3
+                    style="text-align: left"
+                    class="headers pl-lg-5 pb-lg-2 py-lg-0 py-2"
+                >
+                    Track organic shares
+                </h3>
+                <p class="pl-lg-5 py-lg-0 py-2" style="text-align: left">
+                    With Bitly, you can track engagement metrics on your
+                    content’s organic shares (links other Bitly users create
+                    that point to your content). This gives you a clearer
+                    picture of how well your content is performing, even if
+                    you’re not the one sharing it.
+                </p>
+                <div class="row pb-lg-3 pl-lg-5 pb-lg-2 py-lg-0 py-2"></div>
+            </div>
+        </div>
+
+        <hr class="mt-4 mt-lg-0" width="92%" />
+    </div>
+</section>
+
+<section class="brands-section pb-lg-5 pt-lg-3">
+    <div class="row">
+        <div class="col text-center">
+            <h3>The most recognized brands in the world love Bitly</h3>
+        </div>
+    </div>
+
+    <div class="row pl-lg-0 pl-3 ml-auto ml-lg-0">
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid check" src="{{ url_for("static", filename="images/espn.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/disney.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/amazon.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/nike.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/buzzFeed.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/theNYTimes.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/gartner.svg") }}" alt="" />
+        </div>
+        <div class="col-lg-1 col-6">
+            <img class="img-fluid" src="{{ url_for("static", filename="images/bose.svg") }}" alt="" />
+        </div>
+
+        <div class="col-lg-2"></div>
+    </div>
+</section>
+
+{% endblock %}

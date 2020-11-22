@@ -1,0 +1,37 @@
+{% extends "base-no-nav.html" %}
+
+{% block content %}
+
+    <section class="form-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col pt-lg-5 pt-1 px-lg-5 mx-lg-5">
+                    <form class="form-signin px-lg-5">
+                        <div class="py-4 form-heading" style="text-align: center">
+                            <h3>Welcome {{ name }}</h3>
+                            <div class="pt-lg-3 pt-2 warning-text">You're about to create a <b>new Bitly account</b> linked to your Google account.
+                            </div>
+                        </div>
+
+                        <a class="btn btn-sm btn-primary btn-block btn-signup" href="{{ url_for("oauth_register", unique_id=unique_id) }}">
+                            Create new Bitly account
+                        </a>
+
+                        <a class="btn btn-sm btn-primary btn-block btn-cancel mt-lg-3" href="{{ url_for("cancel_signup") }}">
+                            Cancel
+                        </a>
+
+
+                        <div class="px-lg-3 mx-lg-4 px-1 mx-1 pt-lg-3 pt-2" style="text-align: center">
+                            <p class="mt-2 mb-3 text-muted privacy-policy">
+                                <a class="top-link signup-redirect" href="{{ url_for("sign_in") }}"><u><b>Wait!</b> I already have a Bitly account</u></a>
+
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
