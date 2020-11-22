@@ -86,6 +86,7 @@ def add_link():
         db.session.add(link)
         db.session.commit()
 
+        # sending success response to javascript file
         return jsonify({'result': 'success', 'new_link': link.short_url, 'long_link': link.original_url})
     else:
         return redirect(url_for('index'))
@@ -111,12 +112,14 @@ def redirect_to_url(short_url):
         except KeyError:
             ip = request.environ['REMOTE_ADDR']
         link.ip_address = ip
-        # TODO: change to this: response = DbIpCity.get(ip, api_key='free')
-        # getting city name using
-        response = DbIpCity.get('49.36.134.251', api_key='free')
+
+        # getting country name using ip address
+        response = DbIpCity.get(ip, api_key='free')
         current_country_name = pycountry.countries.get(alpha_2=response.country)
         current_country_name = current_country_name.name
         previous_country_name = link.country
+
+        # adding country name from where website is accessed in the database
         if previous_country_name is None:
             link.country = '{"' + current_country_name + '" : ' + '1' + '}'
             link.max_country_visit = 1
@@ -147,6 +150,7 @@ def redirect_to_url(short_url):
 # Registering a user
 @app.route('/a/sign_up', methods=["POST", "GET"])
 def signup():
+    # is user is signed in
     if session.get('user_id'):
         return redirect(url_for("logout"))
     email_flag = False
@@ -166,6 +170,7 @@ def signup():
         except ValidationError:
             email_flag = True
 
+        # validating username
         try:
             username_flag = check_username(user_name)
         except ValidationError:
@@ -231,13 +236,14 @@ def sign_in():
 @app.route("/logout")
 @login_required
 def logout():
+    # popping user from the session
     session.pop('user_id', None)
     logout_user()
     flash("You have logged out")
     return redirect(url_for("index"))
 
 
-# Subject to change
+# Empty Dashboard
 @app.route("/<unique_id>/bitlinks", methods=["POST", "GET"])
 @login_required
 def dashboard(unique_id):
@@ -281,8 +287,10 @@ def dashboard(unique_id):
                            name=name)
 
 
+# Dashboard
 @app.route("/<unique_id>/bitlinks/<selected_link>", methods=["POST", "GET"])
 def dashboard_with_links(unique_id, selected_link):
+    # Getting all the info from the database
     name = get_user_name(Users.query.filter_by(unique_id=unique_id).first())
     user_info = UserDashboard().query.filter_by(unique_id=unique_id).all()
     total_visits = 0
@@ -292,6 +300,8 @@ def dashboard_with_links(unique_id, selected_link):
     labels = []
     bar_chart_data = []
     count_labels = []
+
+    # Getting info for creating chart
     for user in user_info:
         total_visits += user.visits
         total_links += 1
@@ -305,11 +315,14 @@ def dashboard_with_links(unique_id, selected_link):
             max_visits = user.max_country_visit
             max_country_name = user.max_country_visit_name
     count_labels_dict = Counter(count_labels)
+
     for label in count_labels_dict:
         bar_chart_data.append(count_labels_dict[label])
-    background_color = ['rgba(215, 146, 104, 1)'] * total_links
+
+    background_color = ['rgba(215, 146, 104, 1)'] * total_links  # setting background color
     selected_link_info = UserDashboard().query.filter_by(short_url=selected_link).first()
     flag = request.args.get("flag")
+    # if flag is true the it is request for editing the link
     if request.method == "POST" and flag == "True":
         try:
             user = UserDashboard.query.filter_by(short_url=selected_link).first()
@@ -344,6 +357,7 @@ def dashboard_with_links(unique_id, selected_link):
                                     max_visits=max_visits,
                                     max_country_name=max_country_name))
     check_create_button = False
+    # Creating a new link
     if request.method == "POST" and flag != "True":
         check_create_button = True
         user = UserDashboard()
@@ -386,6 +400,7 @@ def dashboard_with_links(unique_id, selected_link):
 @app.route("/options")
 @login_required
 def signup_options():
+    # getting current user id
     g.user = current_user.get_id()
     name = ""
     if g.user:
@@ -399,6 +414,7 @@ def signup_options():
     return render_template("signup-pg1.html", name=name, unique_id=unique_id)
 
 
+# Cancelling the signup process
 @app.route('/cancel-signup')
 def cancel_signup():
     g.user = current_user.get_id()
@@ -511,6 +527,7 @@ def both(unique_id):
     return render_template("both.html", unique_id=unique_id)
 
 
+# Normal pages
 @app.route("/pages/privacy")
 def privacy():
     return render_template("privacy-policy.html")
